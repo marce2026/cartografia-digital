@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlas de Cartografía Histórica</title>
+
+<style>
+
+:root{
+--crema:#f4efe2;
+--sepia:#5c4630;
+--ocre:#c9a66b;
+--verde:#6b7b5c;
+--azul:#3f5c6e;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:Georgia,serif}
+
+body{background:var(--crema);color:var(--sepia);line-height:1.6}
+
+header{
+background:var(--sepia);
+color:white;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+nav a{color:white;text-decoration:none;font-weight:bold}
+
+.hero{
+padding:120px 20px;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url("https://upload.wikimedia.org/wikipedia/commons/5/5c/World_map_1689.JPG");
+background-size:cover;
+background-position:center;
+color:white
+}
+
+.hero h2{
+font-size:clamp(36px,6vw,64px);
+letter-spacing:2px;
+margin-bottom:15px;
+text-shadow:2px 2px 6px rgba(0,0,0,.6);
+}
+
+.hero .tagline{
+font-size:clamp(18px,2.5vw,26px);
+font-style:italic;
+margin-bottom:15px;
+color:#f3e7c9;
+}
+
+.hero p{
+max-width:800px;
+margin:auto;
+font-size:clamp(16px,2vw,20px);
+}
+
+section{padding:60px 15%}
+
+.alt{background:#e8dfcf}
+
+h2{margin-bottom:20px;color:var(--verde)}
+
+/* GALERIA */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:30px
+}
+
+.map-card{
+background:white;
+padding:10px;
+border-radius:6px;
+box-shadow:0 4px 10px rgba(0,0,0,.15);
+text-align:center
+}
+
+.map-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:4px
+}
+
+/* TIMELINE */
+
+.timeline{
+margin-top:40px;
+border-left:3px solid var(--ocre);
+padding-left:20px
+}
+
+.timeline-item{margin-bottom:25px}
+
+.timeline-item span{font-weight:bold;color:var(--azul)}
+
+/* BUSCADOR */
+
+.search-box{
+margin-top:30px;
+display:flex;
+gap:10px
+}
+
+.search-box input{
+padding:10px;
+flex:1
+}
+
+.search-box button{
+padding:10px 20px;
+background:var(--sepia);
+color:white;
+border:none;
+}
+
+/* ASISTENTE */
+
+#assistant-container{
+background:var(--ocre);
+color:white;
+padding:40px;
+text-align:center
+}
+
+footer{
+background:var(--sepia);
+color:white;
+padding:20px;
+text-align:center
+}
+
+/* RESPONSIVE */
+
+@media(max-width:800px){
+section{padding:50px 8%}
+nav ul{flex-direction:column;margin-top:10px}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Atlas Cartográfico Digital</h1>
+
+<nav>
+<ul>
+<li><a href="#cartografia">Cartografía Histórica</a></li>
+<li><a href="#preservacion">Preservación Digital</a></li>
+<li><a href="#metadatos">Metadatos</a></li>
+<li><a href="#oais">Modelo OAIS</a></li>
+<li><a href="#patrimonio">Patrimonio Digital</a></li>
+<li><a href="#mapas">Mapas</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Atlas Cartográfico Digital</h2>
+<div class="tagline">Explorando la memoria del territorio a través de los mapas</div>
+<p>
+Plataforma educativa dedicada a la cartografía histórica, la preservación digital y la gestión del patrimonio cartográfico. Este espacio reúne conocimiento archivístico, tecnologías de preservación y recursos históricos para comprender cómo los mapas han documentado la historia del mundo.
+</p>
+</section>
+
+<section id="cartografia">
+<h2>Cartografía Histórica</h2>
+<p>Los mapas antiguos constituyen documentos fundamentales para comprender la evolución de los territorios, las rutas comerciales, las exploraciones geográficas y los procesos políticos que han configurado el mundo moderno.</p>
+
+<p>Desde los mapas medievales hasta los atlas científicos del siglo XIX, la cartografía refleja la manera en que cada sociedad representó el espacio geográfico y el conocimiento del mundo.</p>
+</section>
+
+<section id="preservacion" class="alt">
+<h2>Preservación Digital Cartográfica</h2>
+<p>La preservación digital permite garantizar la conservación a largo plazo de mapas históricos mediante procesos de digitalización, control de formatos, almacenamiento seguro y monitoreo de integridad digital.</p>
+
+<p>Las instituciones patrimoniales utilizan repositorios digitales y estrategias archivísticas para proteger estos recursos frente a la obsolescencia tecnológica.</p>
+</section>
+
+<section id="metadatos">
+<h2>Metadatos Cartográficos</h2>
+<p>Los metadatos describen las características técnicas, contextuales y geográficas de los mapas digitales.</p>
+
+<p>Estándares como Dublin Core o ISO 19115 permiten documentar colecciones cartográficas facilitando su recuperación, interoperabilidad y preservación.</p>
+</section>
+
+<section id="oais" class="alt">
+<h2>Modelo OAIS</h2>
+<p>El modelo OAIS (Open Archival Information System) es un marco conceptual utilizado para estructurar repositorios digitales confiables.</p>
+
+<p>Define procesos como ingestión, almacenamiento, administración de datos, planificación de preservación y acceso a la información.</p>
+</section>
+
+<section id="patrimonio">
+<h2>Gestión del Patrimonio Digital</h2>
+<p>La gestión del patrimonio digital implica políticas, estrategias y herramientas destinadas a preservar documentos digitales con valor histórico y cultural.</p>
+
+<p>En cartografía incluye mapas digitalizados, bases de datos geográficas, imágenes satelitales históricas y colecciones de planos urbanos.</p>
+</section>
+
+<section id="mapas" class="alt">
+<h2>Galería de Mapas Antiguos</h2>
+
+<div class="search-box">
+<input type="text" id="search" placeholder="Buscar mapas...">
+<button onclick="buscarMapa()">Buscar</button>
+</div>
+
+<div class="gallery" id="gallery">
+
+<div class="map-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/World_map_1689.JPG">
+<p>Mapa del mundo 1689</p>
+</div>
+
+<div class="map-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/80/OrteliusWorldMap1570.jpg">
+<p>Mapa de Ortelius 1570</p>
+</div>
+
+<div class="map-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Cantino_planisphere.jpg">
+<p>Planisferio Cantino 1502</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Historia de la Cartografía</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<span>1500s</span>
+<p>Expansión de la cartografía renacentista y los primeros atlas modernos.</p>
+</div>
+
+<div class="timeline-item">
+<span>1700s</span>
+<p>Desarrollo de mapas científicos y cartografía topográfica.</p>
+</div>
+
+<div class="timeline-item">
+<span>1900s</span>
+<p>Incorporación de fotografía aérea y cartografía moderna.</p>
+</div>
+
+<div class="timeline-item">
+<span>2000s</span>
+<p>Digitalización masiva y desarrollo de sistemas de información geográfica.</p>
+</div>
+
+</div>
+
+</section>
+
+<div id="assistant-container">
+<h3>Asistente Virtual de Cartografía</h3>
+<div id="assistant-widget">
+<!-- AQUÍ SE INTEGRA EL SCRIPT DEL CHATBOT -->
+</div>
+</div>
+
+<footer>
+<p>Proyecto académico sobre cartografía histórica y preservación digital</p>
+</footer>
+
+<script>
+
+function buscarMapa(){
+
+let input=document.getElementById("search").value.toLowerCase();
+
+let cards=document.querySelectorAll(".map-card");
+
+cards.forEach(card=>{
+
+let text=card.innerText.toLowerCase();
+
+if(text.includes(input)){
+card.style.display="block";
+}else{
+card.style.display="none";
+}
+
+});
+
+}
+
+</script>
+
+</body>
+<script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="Z2YBVlCKV657nKRiQ9D8M";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+</html>
